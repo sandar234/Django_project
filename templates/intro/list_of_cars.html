@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %} List of cars {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <table class="table table-warning table-striped">
+                    <thead>
+                    <tr>
+                        <th>Name of brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for car in all_cars %}
+                            <tr>
+                                <td>{{ car.brand }}</td>
+                                <td>{{ car.model }}</td>
+                                <td>{{ car.year }}</td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        {# Definirea elementelor pe coloane #}
+        {#    <div class="row">#}
+        {#        <div class="col-md-8">#}
+        {#            <table class="table table-warning table-striped">#}
+        {#                <thead>#}
+        {#                <tr>#}
+        {#                    <th>Name of brand</th>#}
+        {#                    <th>Model</th>#}
+        {#                    <th>Year</th>#}
+        {#                </tr>#}
+        {#                </thead>#}
+        {#                <tbody>#}
+        {#                {% for car in all_cars %}#}
+        {#                                {% if car.year == 2023 %}#}
+        {#                    <tr>#}
+        {#                        <td>{{ car.brand }}</td>#}
+        {#                        <td>{{ car.model }}</td>#}
+        {#                        <td>{{ car.year }}</td>#}
+        {#                    </tr>#}
+        {#                                {% endif %}#}
+        {#                {% endfor %}#}
+        {#                </tbody>#}
+        {#            </table>#}
+        {#        </div>#}
+        {#        <div class="col-md-2">#}
+                    <a class="btn btn-outline-danger" href="{% url 'list-movies' %}">Go to list of movies</a>
+        {#        </div>#}
+        {#        <div class="col-md-2">#}
+        {#            <h1>Hello</h1>#}
+        {#        </div>#}
+    </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+

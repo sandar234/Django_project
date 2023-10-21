@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %} List of movies {% endblock %}
+
+{% block content %}
+       <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <table class="table table-warning table-striped">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gen</th>
+                        <th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for movie in all_movies %}
+                            <tr>
+                                <td>{{ movie.name }}</td>
+                                <td>{{ movie.gen }}</td>
+                                <td>{{ movie.year }}</td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+          <a href="{% url 'list-cars' %}">Go to list of cars</a>#}
+     </div>
+    </div>
+{% endblock %}
+
+
+
+
+{# <table>#}
+{#    <thead>#}
+{#        <tr>#}
+{#            <th>name</th>#}
+{#            <th>gen</th>#}
+{#            <th>year</th>#}
+{#        </tr>#}
+{#    </thead>#}
+{#    <tbody>#}
+{#        {% for movie in all_movies %}#}
+{#            {% if movie.year == 2023 %}#}
+{#                <tr>#}
+{#                    <td>{{ movie.name }}</td>#}
+{#                    <td>{{ movie.gen }}</td>#}
+{#                    <td>{{ movie.year }}</td>#}
+{#                </tr>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </tbody>#}
+{#</table>#}
+{#<a href="{% url 'list-cars' %}">Go to list of cars</a> #}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

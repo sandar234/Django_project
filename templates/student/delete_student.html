@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Delete - {{ student }} {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <br><br>
+                <div class="card">
+                {% if perms.student.view_list_of_students %}{% endif %}
+                    <div class="card-header">
+
+                        <h1 class="text-center">Delete-{{ student }}</h1>
+                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="card-body">
+                            <h3>Are you sure you want to delete {{ student }}?</h3>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="submit" class="btn btn-outline-success">Yes</button>
+                            <a href="{% url 'list-of-students' %}" class="btn btn-outline-secondary">No</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

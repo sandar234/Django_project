@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} View details - {{ student }} {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <br><br>
+            <div class="card text-center">
+                <div class="card-header">
+                    View details
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ student }}</h5>
+                    <p class="card-text"><strong>Age:</strong> {{ student.age }}</p>
+                    <p class="card-text"><strong>Email:</strong> {{ student.email }}</p>
+                     <p class="card-text"><strong>Description:</strong> {{ student.description }}</p>
+                    <p class="card-text"><strong>Gender:</strong> {{ student.gender }}</p>
+                    <a href="{% url 'list-of-students' %}" class="btn btn-primary">Back</a>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    <strong>Create at: </strong> {{ student.created_at|date:"d-m-Y H:i:s" }} / <strong>Updated at:</strong> {{ student.updated_at|date:"d-m-Y H:i:s" }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

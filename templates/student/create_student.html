@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %} Create a new student {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <br><br>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Create a new student</h3>
+                    </div>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="card-body">
+                            {{ form.as_p }}
+
+
+{#                            generarea formularului form. iar as_p ne face formularului unul sub altul#}
+{##}
+{#                             <div class="row">#}
+{#                                <div class="col-md-6">#}
+{#                                    {% for field in form %}#}
+{#                                        {% if forloop.counter <= 5 %}#}
+{#                                           <div class="mb-3">#}
+{#                                              <label class="form-label">{{ field.label }}:</label>#}
+{#                                                 {{ field }}#}
+{#                                                <span>{{ field.errors }}</span>#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
+{#                                    {% endfor %}#}
+{#                                </div>#}
+{#                                <div class="col-md-6">#}
+{#                                    {% for field in form %}#}
+{#                                        {% if forloop.counter > 5 %}#}
+{#                                          <div class="mb-3">#}
+{#                                              <label class="form-label">{{ field.label }}:</label>#}
+{#                                                 {{ field }}#}
+{#                                             <span>{{ field.errors }}</span>#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
+{#                                    {% endfor %}#}
+{#                                </div>#}
+{#                            </div>#}
+
+
+
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="submit" class="btn btn-outline-success">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
