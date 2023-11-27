@@ -28,3 +28,6 @@ class Trainer(models.Model):
 
 # blank=True un camp nu este obligatoriu
 # null= True  pt viitoarele modificari
+
+
+

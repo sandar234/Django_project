@@ -1,13 +1,51 @@
+<!-- templates/home.html -->
+
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Home {% endblock %}
+{% block title %} Platforma de Studiu IT {% endblock %}
 
-{%  block content %}
-    <div class="container-fluid">
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+    <div class="container-fluid mt-5">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <img src="{% static 'images/img.png' %}" alt="django">
+            <div class="col-md-8 offset-md-2 text-center">
+                <img src="{% static 'images/img.png' %}" alt="django" class="img-fluid mb-4">
+                <h2>Descoperă Lumea IT cu Platforma Noastră de Studiu</h2>
+                <p class="lead">Oferim o gamă largă de cursuri și resurse pentru a-ți dezvolta abilitățile IT.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/img_3.png' %}" alt="coding" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Programare</h5>
+                        <p class="card-text">Cursuri pentru toate nivelele - de la începător la avansat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/img_5.png' %}" alt="web development" class="card-img-top" style="height: 403px">
+                    <div class="card-body">
+                        <h5 class="card-title">Dezvoltare Web</h5>
+                        <p class="card-text">Explorează lumea dezvoltării web cu cele mai noi tehnologii.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/img_4.png' %}" alt="data science" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <p class="card-text">Descoperă secretele analizei datelor și machine learning-ului.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-{%  endblock %}
+{% endblock %}

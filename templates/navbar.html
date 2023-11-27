@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Django Project</a>
+        <a class="navbar-brand" href="#">IT platform</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -100,9 +100,8 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item"
                                    href="{% url 'create-feedback' %}">Create a
-                                new
-                                feedback</a></li>
-                            <li><a class="dropdown-item" href="#">List of
+                                new feedback</a></li>
+                            <li><a class="dropdown-item" href="{% url 'list-of-feedbacks' %}">List of
                                 feedbacks</a></li>
 
                         </ul>

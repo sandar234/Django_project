@@ -35,7 +35,7 @@ urlpatterns = [
 
     path('', include('django.contrib.auth.urls')),
     path('', include('userextend.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # aceasta linie de cod face parte din config. fisierelor statice si utilizat pentru a asigura afisarea corecta
 # a fisierului din MEDIA
